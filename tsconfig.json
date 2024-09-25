@@ -1,0 +1,20 @@
+{
+  "extends": "./.svelte-kit/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "lib": ["es2021", "es2022", "es2023", "dom"],
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "preserveValueImports": false,
+    "verbatimModuleSyntax": false
+  },
+  "exclude": ["./dist/**/*"],
+  "include": ["./docgen/**/*", "./scripts/**/*", "./src/**/*"]
+}
