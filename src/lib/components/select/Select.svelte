@@ -1,7 +1,7 @@
-<script lang="ts" generics="T extends SelectValue">
-  import type { SelectProps, SelectValue } from "./props";
+<script lang="ts" generics="H extends string | number">
+  type Props<T> = { value: T };
 
-  let { value = $bindable() }: SelectProps<T> = $props();
+  let { value = $bindable() }: Props<H> = $props();
 </script>
 
 <input bind:value readonly />
