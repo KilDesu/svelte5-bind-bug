@@ -1,6 +1,6 @@
 import type { HTMLAttributes } from "svelte/elements";
 
-export type SelectValueSingle = string | number;
+type SelectValueSingle = string | number;
 
 export type SelectValueMultiple = SelectValueSingle[];
 

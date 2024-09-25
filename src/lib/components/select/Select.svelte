@@ -1,5 +1,5 @@
 <script lang="ts" generics="T extends SelectValue">
-  import type { SelectProps, SelectValue, SelectValueMultiple, SelectValueSingle } from "./props";
+  import type { SelectProps, SelectValue, SelectValueMultiple } from "./props";
 
   let { value = $bindable(), displayValue = false, multiple = false }: SelectProps<T> = $props();
 
