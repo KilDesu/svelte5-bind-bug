@@ -1,19 +1,7 @@
 <script lang="ts" generics="T extends SelectValue">
-  import type { SelectProps, SelectValue, SelectValueMultiple } from "./props";
+  import type { SelectProps, SelectValue } from "./props";
 
-  let { value = $bindable(), displayValue = false, multiple = false }: SelectProps<T> = $props();
-
-  const currentDisplayValue = $derived.by(() => {
-    if (displayValue !== undefined) {
-      return displayValue;
-    }
-
-    if (!multiple) {
-      return value;
-    }
-
-    return (value as SelectValueMultiple).join(", ");
-  });
+  let { value = $bindable() }: SelectProps<T> = $props();
 </script>
 
-<input value={currentDisplayValue} readonly />
+<input bind:value readonly />
